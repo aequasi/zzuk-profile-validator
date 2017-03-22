@@ -45,14 +45,6 @@ class ProfileValidator {
     }
     
     validate(data) {
-        //console.log(JSON.stringify(Profile, null, 4));
-        //console.log(data.Tasks[0])
-        //let v = new Validator();
-        //v.addSchema(Tasks.WalkTask, Tasks.WalkTask.i)
-        
-        //console.log(JSON.stringify(Tasks.WalkTask.properties.Action, null, 4));
-        //return v.validate(data.Tasks[0], Tasks.WalkTask);
-        
         const validation = this.Validator.validate(data, Profile);
         if (validation.errors.length > 0) {
             for (let index in data.Tasks) {

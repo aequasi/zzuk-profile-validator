@@ -2,9 +2,9 @@ const multer           = require('multer'),
       bodyParser       = require('body-parser'),
       ProfileValidator = require('../ProfileValidator');
 
-
 module.exports = router => {
     const v = new ProfileValidator();
+    v.validate({});
     
     router.use(bodyParser.urlencoded({extended: false}));
     router.use(bodyParser.json());
@@ -73,7 +73,7 @@ module.exports = router => {
                         <ul>
                             <li class="is-active">Endpoints:</li>
                             <li><a>POST / - Raw application/json</a></li>
-                            <li class="is-active">Build By: Aaron</li>
+                            <li class="is-active">Built By: Aaron</li>
                         </ul>
                     </div>
                 </nav>

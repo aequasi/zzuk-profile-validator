@@ -2,20 +2,21 @@ module.exports = {
     id:          "/Location",
     title:       "Location",
     description: "An X/Y/Z location",
-    type:        "object",
-    properties:  {
-        X: {
-            type:        "float",
+    type:        "array",
+    items:       [
+        {
+            type:        "number",
             description: "X Position"
         },
-        Y: {
-            type:        "float",
+        {
+            type:        "number",
             description: "Y Position"
         },
-        Z: {
-            type:        "float",
+        {
+            type:        "number",
             description: "Z Position"
         }
-    },
-    required:    ["X", "Y", "Z"]
+    ],
+    minItems:    3,
+    maxItems:    3
 };

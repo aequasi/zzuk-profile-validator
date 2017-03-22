@@ -21,12 +21,12 @@ module.exports = {
             description: "Whether or not this task is a loop",
             default:     false
         },
-        Location:    {
-            type:        "array",
-            items:       {type: "number"},
-            minItems:    3,
-            maxItems:    3,
-            description: "Location where this task takes place. Format is [X, Y, Z]"
+        Locations:    {
+            oneOf: [
+                {$ref: "/Location"},
+                {type:  "array", items: {$ref: "/Location"}}
+            ],
+            description: "Locations where this task takes place."
         },
         Priority:    {
             type:        "integer",
@@ -62,5 +62,6 @@ module.exports = {
             ],
             description: "Task to run after this task is finished. Useful for conditionals"
         }
-    }
+    },
+    
 };
