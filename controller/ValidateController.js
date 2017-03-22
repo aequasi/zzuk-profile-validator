@@ -9,7 +9,7 @@ module.exports = router => {
     router.use(bodyParser.urlencoded({extended: false}));
     router.use(bodyParser.json());
     router.post(
-        '/validate',
+        '/',
         (req, res) => {
             if (req.body.profile !== undefined) {
                 req.body = JSON.parse(req.body.profile);
@@ -72,7 +72,7 @@ module.exports = router => {
                     <div class="container">
                         <ul>
                             <li class="is-active">Endpoints:</li>
-                            <li><a>POST /validate - Raw application/json</a></li>
+                            <li><a>POST / - Raw application/json</a></li>
                             <li class="is-active">Build By: Aaron</li>
                         </ul>
                     </div>
