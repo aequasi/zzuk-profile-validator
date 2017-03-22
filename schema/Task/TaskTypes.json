@@ -1,0 +1,17 @@
+[
+    "Attack",
+    "Loot",
+    "Travel",
+    "Walk",
+    "Wait",
+    "PickUpQuest",
+    "TurnInQuest",
+    "Target",
+    "Interact",
+    "CastSpell",
+    "Buy",
+    "Sell",
+    "Repair",
+    "Mail",
+    "Parent"
+]

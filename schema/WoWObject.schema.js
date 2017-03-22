@@ -1,0 +1,38 @@
+module.exports = {
+    id:         "/WoWObject",
+    title:      "WoW Object",
+    type:       "object",
+    properties: {
+        ID:   {
+            type:        "integer",
+            description: "ID of Object"
+        },
+        Name: {
+            type:        "string",
+            description: "Name of Object"
+        }
+    },
+    oneOf:      [
+        {
+            required:   ["ID"],
+            properties: {
+                Exact: {
+                    type:        "boolean",
+                    description: "Whether or not this match is exact",
+                    enum:        [true],
+                    default:     true
+                }
+            }
+        },
+        {
+            required:   ["Name"],
+            properties: {
+                Exact: {
+                    type:        "boolean",
+                    description: "Whether or not this match is exact",
+                    default:     false
+                }
+            }
+        }
+    ]
+};

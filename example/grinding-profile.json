@@ -1,0 +1,50 @@
+{
+    "Name":   "Example Grinding Profile",
+    "Author": "Aaron <aequasi@gmail.com>",
+    "Tasks":  [
+        {
+            "Condition": "CurrentRunTime < Settings.MaximumRunTime",
+            "Loop":      true,
+            "Tasks":     [
+                {
+                    "Action":    "Attack",
+                    "Condition": "BagSpace >= Settings.MinimumBagSpace",
+                    "Loop":      true,
+                    "Location":  [
+                        -8949.95,
+                        -132.493,
+                        83.5312
+                    ]
+                },
+                {
+                    "Action":    "Sell",
+                    "Vendor":    {
+                        "Name":  "Osrok the Immovable",
+                        "Exact": true
+                    },
+                    "Repair":    true,
+                    "Protected": [
+                        {
+                            "Name": "bandage"
+                        },
+                        {
+                            "ID": 1235123
+                        }
+                    ],
+                    "Location":  [
+                        -8649.95,
+                        -112.493,
+                        81.5312
+                    ]
+                }
+            ],
+            "After":     {
+                "Action": "CastSpell",
+                "Spell":  {
+                    "Name": "Hearthstone"
+                },
+                "Target": "none"
+            }
+        }
+    ]
+}

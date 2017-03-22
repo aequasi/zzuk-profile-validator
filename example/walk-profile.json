@@ -1,0 +1,8 @@
+{
+    "Name": "Example Walk Profile",
+    "Author": "Aaron <aequasi@gmail.com>",
+    "Tasks": [
+        {"Action": "Walk", "Location": [-8949.95, -132.493, 83.5312]},
+        {"Action": "Walk", "Location": [-8924.397, -99.21898, 83.87741]}
+    ]
+}
