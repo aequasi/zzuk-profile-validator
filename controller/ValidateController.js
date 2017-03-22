@@ -72,10 +72,8 @@ module.exports = router => {
                     <div class="container">
                         <ul>
                             <li class="is-active">Endpoints:</li>
-                            <li><a>POST /:noDownload?</a></li>
-                            <li><a>POST /xml/:name/:type? - Raw text/xml</a></li>
                             <li><a>POST /validate - Raw application/json</a></li>
-                            <li><a>GET /example</a></li>
+                            <li class="is-active">Build By: Aaron</li>
                         </ul>
                     </div>
                 </nav>

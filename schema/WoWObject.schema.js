@@ -21,6 +21,12 @@ module.exports = {
                     description: "Whether or not this match is exact",
                     enum:        [true],
                     default:     true
+                },
+                Regex: {
+                    type:        "boolean",
+                    description: "Whether or not this match is a regex",
+                    enum:        [false],
+                    default:     false
                 }
             }
         },
@@ -30,6 +36,11 @@ module.exports = {
                 Exact: {
                     type:        "boolean",
                     description: "Whether or not this match is exact",
+                    default:     false
+                },
+                Regex: {
+                    type:        "boolean",
+                    description: "Whether or not this match is a regex",
                     default:     false
                 }
             }
