@@ -15,6 +15,7 @@ const
         BuyTask:         require('./schema/Task/BuyTask.schema'),
         CastSpellTask:   require('./schema/Task/CastSpellTask.schema'),
         CustomTask:      require('./schema/Task/CustomTask.schema'),
+        DefendTask:      require('./schema/Task/DefendTask.schema'),
         InteractTask:    require('./schema/Task/InteractTask.schema'),
         LootTask:        require('./schema/Task/LootTask.schema'),
         MailTask:        require('./schema/Task/MailTask.schema'),
