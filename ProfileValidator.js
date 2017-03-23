@@ -14,6 +14,7 @@ const
         AttackTask:      require('./schema/Task/AttackTask.schema'),
         BuyTask:         require('./schema/Task/BuyTask.schema'),
         CastSpellTask:   require('./schema/Task/CastSpellTask.schema'),
+        CustomTask:      require('./schema/Task/CustomTask.schema'),
         InteractTask:    require('./schema/Task/InteractTask.schema'),
         LootTask:        require('./schema/Task/LootTask.schema'),
         MailTask:        require('./schema/Task/MailTask.schema'),
@@ -60,7 +61,7 @@ class ProfileValidator {
                         if (subValidation.errors.length > 0) {
                             for (let error of subValidation.errors) {
                                 error.property = error.property.replace(/instance\./g, `instance.Tasks[${index}].`);
-                                error.stack = error.stack.replace(/instance\./g, `instance.Tasks[${index}].`);
+                                error.stack    = error.stack.replace(/instance\./g, `instance.Tasks[${index}].`);
                                 console.log(error);
                                 
                                 validation.errors.push(error);
@@ -71,7 +72,7 @@ class ProfileValidator {
                         break;
                     }
                 }
-    
+                
                 if (found) {
                     validation.errors.splice(index, 1);
                     continue;
@@ -90,7 +91,7 @@ class ProfileValidator {
             const ref = x.$ref;
             if (typeof ref === 'string') {
                 const schema = x.$ref.replace("/Task/", "");
-    
+                
                 x.$ref = Tasks[schema];
             }
             
