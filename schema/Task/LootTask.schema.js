@@ -21,6 +21,11 @@ module.exports = merge({}, AbstractTask, {
             type:        "array",
             description: "Items to loot",
             items:       {$ref: "/Item"}
+        },
+        IgnoredItems:   {
+            type:        "array",
+            description: "Items to ignore",
+            items:       {$ref: "/Item"}
         }
     },
     oneOf:       [
