@@ -20,6 +20,7 @@ const
         MailTask:        require('./schema/Task/MailTask.schema'),
         ParentTask:      require('./schema/Task/ParentTask.schema'),
         PickUpQuestTask: require('./schema/Task/PickUpQuestTask.schema'),
+        ReferenceTask:   require('./schema/Task/ReferenceTask.schema'),
         RepairTask:      require('./schema/Task/RepairTask.schema'),
         SellTask:        require('./schema/Task/SellTask.schema'),
         TargetTask:      require('./schema/Task/TargetTask.schema'),

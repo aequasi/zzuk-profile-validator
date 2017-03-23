@@ -21,10 +21,10 @@ module.exports = {
             description: "Whether or not this task is a loop",
             default:     false
         },
-        Locations:    {
-            oneOf: [
+        Locations:   {
+            oneOf:       [
                 {$ref: "/Location"},
-                {type:  "array", items: {$ref: "/Location"}}
+                {type: "array", items: {$ref: "/Location"}}
             ],
             description: "Locations where this task takes place."
         },
@@ -50,16 +50,9 @@ module.exports = {
             }
         },
         After:       {
-            oneOf:       [
-                {
-                    oneOf: TaskRefs.map(x => {
-                        return {$ref: x};
-                    })
-                },
-                {
-                    type: "string"
-                }
-            ],
+            oneOf:       TaskRefs.map(x => {
+                return {$ref: x};
+            }),
             description: "Task to run after this task is finished. Useful for conditionals"
         }
     },
