@@ -40,6 +40,11 @@ module.exports = {
             enum:        TaskTypes,
             default:     "Parent"
         },
+        Parallel: {
+            type:        "bool",
+            description: "Whether or not the sub-tasks for this task are ran in parallel",
+            default:     false,
+        },
         Tasks:       {
             type:        "array",
             description: "Sub-Tasks for this task",

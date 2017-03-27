@@ -24,12 +24,12 @@ module.exports = merge({}, AbstractTask, {
         MailGrey:   {
             type:        "boolean",
             description: "Whether or not to Mail all grey items",
-            default:     true
+            default:     false
         },
         MailWhite:  {
             type:        "boolean",
             description: "Whether or not to Mail all white items",
-            default:     true
+            default:     false
         },
         MailGreen:  {
             type:        "boolean",
