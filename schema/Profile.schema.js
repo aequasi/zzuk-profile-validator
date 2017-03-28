@@ -22,6 +22,11 @@ module.exports = {
             type:        "string",
             description: "URL for the profile"
         },
+        Loop: {
+            type:        "bool",
+            description: "Whether or not the tasks for this profile are looped",
+            default:     false,
+        },
         Parallel: {
             type:        "bool",
             description: "Whether or not the tasks for this profile are ran in parallel",
