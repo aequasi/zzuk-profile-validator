@@ -27,9 +27,5 @@ module.exports = merge({}, AbstractTask, {
             description: "Items to ignore",
             items:       {$ref: "/Item"}
         }
-    },
-    oneOf:       [
-        {required: ["LootAll"]},
-        {required: ["Items"]},
-    ]
+    }
 });
