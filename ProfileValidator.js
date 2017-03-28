@@ -12,6 +12,7 @@ const
     Tasks     = {
         AbstractTask:    require('./schema/Task/AbstractTask.schema'),
         AttackTask:      require('./schema/Task/AttackTask.schema'),
+        BuffTask:        require('./schema/Task/BuffTask.schema'),
         BuyTask:         require('./schema/Task/BuyTask.schema'),
         CastSpellTask:   require('./schema/Task/CastSpellTask.schema'),
         CustomTask:      require('./schema/Task/CustomTask.schema'),
@@ -23,6 +24,7 @@ const
         PickUpQuestTask: require('./schema/Task/PickUpQuestTask.schema'),
         ReferenceTask:   require('./schema/Task/ReferenceTask.schema'),
         RepairTask:      require('./schema/Task/RepairTask.schema'),
+        RestTask:        require('./schema/Task/RestTask.schema'),
         SellTask:        require('./schema/Task/SellTask.schema'),
         TargetTask:      require('./schema/Task/TargetTask.schema'),
         TravelTask:      require('./schema/Task/TravelTask.schema'),
