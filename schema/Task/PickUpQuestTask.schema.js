@@ -1,5 +1,6 @@
 const merge        = require('merge-deep');
 const AbstractTask = require('./AbstractTask.schema.js');
+const TaskRefs     = require('./TaskRefs');
 
 module.exports = merge({}, AbstractTask, {
     id:          "/Task/PickUpQuestTask",
