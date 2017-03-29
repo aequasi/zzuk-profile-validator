@@ -40,6 +40,16 @@ module.exports = {
             enum:        TaskTypes,
             default:     "Parent"
         },
+        Stateful: {
+            type:        "bool",
+            description: "Whether or not the sub-tasks for this task are stateful",
+            default:     false,
+        },
+        Sequential: {
+            type:        "bool",
+            description: "Whether or not the sub-tasks for this task are sequential",
+            default:     false,
+        },
         Parallel: {
             type:        "bool",
             description: "Whether or not the sub-tasks for this task are ran in parallel",
