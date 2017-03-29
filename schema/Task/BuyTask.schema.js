@@ -26,5 +26,5 @@ module.exports = merge({}, AbstractTask, {
             items:       {$ref: "/Item"}
         }
     },
-    required:    ["Vendor", "Items"]
+    required:    ["Vendor", "Items", "Locations"]
 });

@@ -21,5 +21,5 @@ module.exports = merge({}, AbstractTask, {
             description: "Location to travel to",
         },
     },
-    required:    ["NPC", "Destination"]
+    required:    ["NPC", "Destination", "Locations"]
 });

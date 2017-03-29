@@ -20,6 +20,6 @@ module.exports = merge({}, AbstractTask, {
             $ref:        "/Quest",
             description: "Quest to pick up"
         },
-        required: ["NPC", "Quest"]
+        required: ["NPC", "Quest", "Locations"]
     }
 });
