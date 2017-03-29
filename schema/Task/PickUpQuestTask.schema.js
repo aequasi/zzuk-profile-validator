@@ -20,6 +20,15 @@ module.exports = merge({}, AbstractTask, {
             $ref:        "/Quest",
             description: "Quest to pick up"
         },
+        Tasks:    {
+            type:        "array",
+            description: "Tasks to do to complete the quest",
+            items:       {
+                anyOf: TaskRefs.map(x => {
+                    return {$ref: x};
+                })
+            }
+        },
         required: ["NPC", "Quest", "Locations"]
     }
 });
