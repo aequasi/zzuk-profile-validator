@@ -1,5 +1,5 @@
-const merge    = require('merge-deep');
-const LootTask = require('./LootTask.schema.js');
+const merge        = require('merge-deep');
+const AbstractTask = require('./AbstractTask.schema.js');
 
 module.exports = merge({}, AbstractTask, {
     id:          "/Task/DefendTask",
