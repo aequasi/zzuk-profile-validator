@@ -19,7 +19,12 @@ module.exports = merge({}, AbstractTask, {
         Protected:  {
             type:        "array",
             description: "Items protected from Mailing",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         },
         MailGrey:   {
             type:        "boolean",
@@ -54,12 +59,13 @@ module.exports = merge({}, AbstractTask, {
         Items:      {
             type:        "array",
             description: "Items to Mail",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         }
     },
-    required:    ["User"],
-    oneOf:       [
-        {required: ["MailAll"]},
-        {required: ["Items"]},
-    ]
+    required:    ["Recipient"],
 });

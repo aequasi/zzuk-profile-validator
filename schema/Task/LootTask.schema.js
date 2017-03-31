@@ -7,25 +7,35 @@ module.exports = merge({}, AbstractTask, {
     description: "Loot Task",
     type:        "object",
     properties:  {
-        Action:  {
+        Action:       {
             type:        "string",
             description: "Action to perform",
             pattern:     "Loot"
         },
-        LootAll: {
+        LootAll:      {
             type:        "boolean",
             description: "Whether or not to loot all items",
             default:     true
         },
-        Items:   {
+        Items:        {
             type:        "array",
             description: "Items to loot",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         },
-        IgnoredItems:   {
+        IgnoredItems: {
             type:        "array",
             description: "Items to ignore",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         }
     }
 });

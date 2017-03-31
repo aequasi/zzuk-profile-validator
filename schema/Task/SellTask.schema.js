@@ -13,7 +13,10 @@ module.exports = merge({}, AbstractTask, {
             pattern:     "Sell"
         },
         Vendor:     {
-            $ref: "/NPC"
+            oneOf: [
+                {$ref: "/NPC"},
+                {type: "array", items: {$ref: "/NPC"}}
+            ],
         },
         Repair:     {
             type:        "boolean",
@@ -23,7 +26,12 @@ module.exports = merge({}, AbstractTask, {
         Protected:  {
             type:        "array",
             description: "Items protected from selling",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         },
         SellGrey:   {
             type:        "boolean",
@@ -58,7 +66,12 @@ module.exports = merge({}, AbstractTask, {
         Items:      {
             type:        "array",
             description: "Items to sell",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         }
     },
     required:    ["Vendor", "Locations"]

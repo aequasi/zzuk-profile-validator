@@ -3,13 +3,18 @@ module.exports = {
     title:      "WoW Object",
     type:       "object",
     properties: {
-        ID:   {
+        ID:        {
             type:        "integer",
             description: "ID of Object"
         },
-        Name: {
+        Name:      {
             type:        "string",
             description: "Name of Object"
+        },
+        Condition: {
+            type:        "string",
+            description: "Condition required for matching this object",
+            default:     true
         }
     },
     oneOf:      [

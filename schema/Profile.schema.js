@@ -6,33 +6,43 @@ module.exports = {
     description: "A profile for the Vanilla WoW Bot: ZzukBot",
     type:        "object",
     properties:  {
-        Name:     {
+        Name:       {
             type:        "string",
             description: "Name of the profile"
         },
-        Author:   {
+        Author:     {
             type:        "string",
             description: "Author of the profile"
         },
-        Support:  {
+        Support:    {
             type:        "string",
             description: "Support info for the profile"
         },
-        URL:      {
+        URL:        {
             type:        "string",
             description: "URL for the profile"
         },
-        Loop: {
+        Loop:       {
             type:        "bool",
             description: "Whether or not the tasks for this profile are looped",
             default:     false,
         },
-        Parallel: {
+        Parallel:   {
             type:        "bool",
             description: "Whether or not the tasks for this profile are ran in parallel",
             default:     false,
         },
-        Tasks:    {
+        Sequential: {
+            type:        "bool",
+            description: "Whether or not the tasks for this profile are ran in sequence",
+            default:     false,
+        },
+        Stateful:   {
+            type:        "bool",
+            description: "Whether or not the tasks for this profile remember state",
+            default:     false,
+        },
+        Tasks:      {
             type:        "array",
             description: "Tasks for this profile",
             items:       {

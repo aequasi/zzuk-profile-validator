@@ -13,7 +13,10 @@ module.exports = merge({}, AbstractTask, {
             pattern:     "Repair"
         },
         Vendor: {
-            $ref: "/NPC"
+            oneOf: [
+                {$ref: "/NPC"},
+                {type: "array", items: {$ref: "/NPC"}}
+            ]
         }
     },
     required:    ["Vendor", "Locations"]

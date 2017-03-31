@@ -1,7 +1,7 @@
 const merge        = require('merge-deep');
 const AbstractTask = require('./AbstractTask.schema.js');
 
-module.exports = merge(AbstractTask, {
+module.exports = merge({}, AbstractTask, {
     id:          "/Task/WalkTask",
     title:       "Walk Task",
     description: "Walk Task",

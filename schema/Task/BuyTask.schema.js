@@ -13,7 +13,10 @@ module.exports = merge({}, AbstractTask, {
             pattern:     "Buy"
         },
         Vendor: {
-            $ref: "/NPC"
+            oneOf: [
+                {$ref: "/NPC"},
+                {type: "array", items: {$ref: "/NPC"}}
+            ],
         },
         Repair: {
             type:        "boolean",
@@ -23,7 +26,12 @@ module.exports = merge({}, AbstractTask, {
         Items:  {
             type:        "array",
             description: "Items to Buy",
-            items:       {$ref: "/Item"}
+            items:       {
+                oneOf: [
+                    {$ref: "/Item"},
+                    {type: "array", items: {$ref: "/Item"}}
+                ]
+            }
         }
     },
     required:    ["Vendor", "Items", "Locations"]

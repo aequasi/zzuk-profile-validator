@@ -2,15 +2,15 @@ const merge    = require('merge-deep');
 const LootTask = require('./LootTask.schema.js');
 
 module.exports = merge({}, AbstractTask, {
-    id:          "/Task/AttackTask",
-    title:       "Attack Task",
-    description: "Attack Task",
+    id:          "/Task/GrindTask",
+    title:       "Grind Task",
+    description: "Grind Task",
     type:        "object",
     properties:  {
         Action:      {
             type:        "string",
             description: "Action to perform",
-            pattern:     "Attack"
+            pattern:     "Grind"
         },
         Mobs:        {
             type:  "array",
@@ -30,6 +30,15 @@ module.exports = merge({}, AbstractTask, {
                 ]
             }
         },
+        Bounds:      {
+            type:     "array",
+            minItems: 3,
+            items:    {$ref: "/Location"}
+        },
+        Avoid:       {
+            type:  "array",
+            items: {$ref: "/Location"}
+        }
     },
-    required:    ["Mobs"]
+    required:    ["Bounds"]
 });
